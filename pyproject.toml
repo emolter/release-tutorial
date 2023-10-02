@@ -1,0 +1,54 @@
+[project]
+name = "release_tutorial"
+description = "dotAstronomy23 tutorial release"
+authors = [
+    { name="Ned Molter", email="emolter@berkeley.edu" },
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache License" }
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    ]
+dynamic = ["version"]
+dependencies = [
+    # "numpy",
+    # "astropy",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/emolter/release-tutorial"
+"Source" = "https://github.com/emolter/release-tutorial"
+"Bug Tracker" = "https://github.com/emolter/release-tutorial/issues"
+
+[project.optional-dependencies]
+test = ["pytest"]
+docs = ["sphinx", "sphinx_book_theme", "myst-nb"]
+dev = ["pre-commit", "black", "ruff", "nox"]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/release_tutorial/_version.py"
+
+[tool.black]
+target-version = ["py39"]
+line-length = 88
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+select = ["F", "I", "E", "W", "YTT", "B", "Q", "PLE", "PLR", "PLW", "UP"]
+ignore = []
+exclude = []
+
+[tool.ruff.isort]
+known-first-party = ["release_tutorial"]
+combine-as-imports = true

@@ -1,0 +1,15 @@
+_commit: 7564fdd
+_src_path: gh:dfm/copier-simple-python
+author_email: emolter@berkeley.edu
+author_fullname: Ned Molter
+c_or_cpp_support: false
+code_of_conduct_email: emolter@berkeley.edu
+copyright_holder: Ned Molter
+copyright_license: Apache-2.0
+copyright_year: '2023'
+project_bug_tracker: https://github.com/emolter/release-tutorial/issues
+project_description: dotAstronomy23 tutorial release
+project_homepage: https://github.com/emolter/release-tutorial
+project_name: release-tutorial
+project_source_repository: https://github.com/emolter/release-tutorial
+python_project_name: release_tutorial

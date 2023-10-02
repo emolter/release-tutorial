@@ -1,0 +1,7 @@
+src/release_tutorial/_version.py
+.nox
+.*_cache
+build
+dist
+*.egg-info
+docs/_build
